@@ -20,7 +20,7 @@ summaryLength = 10 # Configure how long the post summary should be on the homepa
     math = false
     
     # Blog description at the top of the homepage. Supports markdown.
-    description = "This blog is for the developers of the Cosmo-CoDiOS project to discuss progress, and a way to look behind-the-scenes of the project"
+    description = "This blog is for the developers of the Cosmo-CoDiOS project to discuss progress, and a way to look behind-the-scenes of the project."
 
     showReadMore = true
 
