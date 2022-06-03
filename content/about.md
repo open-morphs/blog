@@ -6,4 +6,5 @@ title: "About"
 
 Welcome to the blog by the developers of the Cosmo-CoDiOS project.
 
-Here we discuss progress, features, and the thinking process behind Cosmo-CoDiOS.
+Here we discuss progress, features, and the thinking process behind the
+Cosmo-CoDiOS project.
