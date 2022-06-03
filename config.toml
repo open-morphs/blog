@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "The Cosmo-CoDiOS Project"
 theme = "noteworthy"
 enableRobotsTXT = true
-paginate = 4 # Set the number of posts to show before overflowing to the next page.
+paginate = 5 # Set the number of posts to show before overflowing to the next page.
 summaryLength = 10 # Configure how long the post summary should be on the homepage.
 
 [taxonomies]
@@ -17,7 +17,8 @@ summaryLength = 10 # Configure how long the post summary should be on the homepa
     unsafe = false
 
 [params]
-    math = true
+    math = false
+    
     # Blog description at the top of the homepage. Supports markdown.
     description = "This blog is for the developers of the Cosmo-CoDiOS project to discuss progress, and a way to look behind-the-scenes of the project"
 
