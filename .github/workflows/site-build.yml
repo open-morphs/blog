@@ -1,27 +1,24 @@
-name: CI
-on: push
+name: Website builder
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    
 jobs:
-  deploy:
-    runs-on: ubuntu-18.04
+  build:
+    concurrency: ste-build-${{ github.ref }}
+    runs-on: ubuntu-latest
     steps:
-      - name: Git checkout
-        uses: actions/checkout@v2
-
-      - name: Update theme
-        run: git submodule update --init --recursive
-
-      - name: Setup hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "0.98.0"
-          extended: true
-
-      - name: Build
-        run: hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages
+    - uses: actions/checkout@v3
+      with:
+        submodules: true
+    - name: Build blog
+      uses: klakegg/actions-hugo@1.0.0
+      with:
+        image: ext-alpine
+        env: production
+    - name: Deploy to GitHub
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: public
