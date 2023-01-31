@@ -4,7 +4,7 @@ type: section
 title: "About"
 ---
 
-Welcome to this blog by the developers of the Cosmo-CoDiOS project.
+Welcome to this blog by the developers of the Open-Morphs project.
 
 Here we discuss progress, features, and the thinking process behind the
-Cosmo-CoDiOS project.
+Open-Morphs project.
